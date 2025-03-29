@@ -1,12 +1,14 @@
-Soundness Docker Image 🚀
-This repository provides a Dockerized environment for using Soundness CLI with Rust and Cargo pre-installed.
+# **Soundness Docker Image** 🚀  
 
-🔹 Quick Start: Use the Image
-To use the Soundness Docker image, simply pull and run it:
+This repository provides a **Dockerized environment** for using **Soundness CLI** with **Rust and Cargo** pre-installed.  
 
-bash
-Copy
-Edit
+---
+
+## **🔹 Quick Start: Use the Image**  
+
+To use the Soundness Docker image, simply pull and run it:  
+
+```sh
 docker pull rohan014233/soundness:latest
 docker run -it rohan014233/soundness:latest
 This gives you a fully configured environment with Rust, Cargo, and Soundness CLI ready to use. ✅
@@ -14,13 +16,12 @@ This gives you a fully configured environment with Rust, Cargo, and Soundness CL
 📦 About the Project
 This project provides a pre-configured and reproducible environment for working with Soundness CLI in Docker.
 
-It includes:
-
-🛠 Ubuntu 22.04 as the base image
+🛠 Features:
+🏗 Ubuntu 22.04 as the base image
 
 🔗 Rust & Cargo installed via rustup
 
-🏗 Soundness CLI installed and verified
+🔨 Soundness CLI installed and verified
 
 🏗 Configured PATH environment to access binaries easily
 
@@ -28,21 +29,18 @@ It includes:
 If you want to build the image manually, follow these steps:
 
 1️⃣ Clone the Repository
-
-bash
+sh
 Copy
 Edit
 git clone <repo-url>
 cd <repo-folder>
 2️⃣ Build the Image
-
-bash
+sh
 Copy
 Edit
 docker build -t soundnessup-image .
 3️⃣ Run the Image
-
-bash
+sh
 Copy
 Edit
 docker run -it soundnessup-image
@@ -50,27 +48,24 @@ docker run -it soundnessup-image
 If you want to push the image to Docker Hub (replace rohan014233 with your username):
 
 1️⃣ Tag the Image
-
-bash
+sh
 Copy
 Edit
 docker tag soundnessup-image rohan014233/soundness:latest
 2️⃣ Login to Docker Hub
-
-bash
+sh
 Copy
 Edit
 docker login
 3️⃣ Push the Image
-
-bash
+sh
 Copy
 Edit
 docker push rohan014233/soundness:latest
-⚙️ Environment Setup in the Container
-After running the container, you can verify installations:
+⚙️ Verify Installation in the Container
+After running the container, you can check installed tools:
 
-bash
+sh
 Copy
 Edit
 rustc --version   # Check Rust installation
@@ -78,14 +73,14 @@ cargo --version   # Check Cargo installation
 soundness-cli --help  # Verify Soundness CLI
 To ensure soundness-cli is available in every session, use this inside the container:
 
-bash
+sh
 Copy
 Edit
 source /root/.bashrc
 🔗 Mounting Local Files into the Container
 To work with local files inside the container, use volume mounting:
 
-bash
+sh
 Copy
 Edit
 docker run -it -v $(pwd):/workspace rohan014233/soundness:latest
@@ -101,3 +96,17 @@ Push to Docker Hub: docker push
 Mount local files: -v $(pwd):/workspace
 
 🚀 Now you're ready to use Soundness CLI inside Docker! 🔥
+
+📜 License
+This project is open-source and freely available for use.
+
+💡 Contributions
+Feel free to submit issues or PRs to improve the setup.
+
+### ✅ **How This is GitHub-Friendly:**  
+✔️ Uses **proper Markdown formatting**  
+✔️ Includes **code blocks** for commands  
+✔️ Uses **section headers** (`##`, `###`) for clarity  
+✔️ Follows **best practices** for Docker projects  
+
+This will **display beautifully** on GitHub. Let me know if you need any tweaks! 🚀
