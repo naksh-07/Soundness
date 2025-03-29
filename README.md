@@ -32,8 +32,8 @@ If you want to build the image manually, follow these steps:
 sh
 Copy
 Edit
-git clone <repo-url>
-cd <repo-folder>
+git clone [<repo-url>](https://github.com/naksh-07/Soundness.git)
+cd Soundness
 2️⃣ Build the Image
 sh
 Copy
